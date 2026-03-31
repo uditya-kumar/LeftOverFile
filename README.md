@@ -34,11 +34,9 @@
 
 <div align="center">
 
-https://github.com/user-attachments/assets/b2a1b7b6-c3d4-4e5f-a6b7-8c9d0e1f2a3b
+[https://github.com/user-attachments/assets/b2a1b7b6-c3d4-4e5f-a6b7-8c9d0e1f2a3b](https://github.com/user-attachments/assets/13581956-a2c6-4e4b-b770-e7a56d5afbcd)
 
 </div>
-
-> **Note:** Replace the video URL above with your actual GitHub video link after uploading `Demo.mp4` to your repository.
 
 ---
 
