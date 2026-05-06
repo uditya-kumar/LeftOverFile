@@ -87,7 +87,14 @@ class LeftoverCleanerApp:
             "DMCache", "network-sessions", "npm", "npm-cache", "node-gyp", "nodejs", "kotlin", "java-db",
             "jupyter", "gcloud", "cloud-code", "google-vscode-extension", "main.kts.compiled.cache",
             "eas-cli", "eas-cli-nodejs", "nextjs-nodejs", "vscode-react-native", "ms-playwright-go", "fanal",
-            "clerk", "WSL", "wsl", "DockerDesktop", "docker-secrets-engine"
+            "clerk", "WSL", "wsl", "DockerDesktop", "docker-secrets-engine",
+            # User profile folders (not leftover app folders)
+            "Desktop", "Documents", "Downloads", "Pictures", "Videos", "Music", "Favorites", "Links",
+            "Saved Games", "Searches", "Contacts", "3D Objects", "OneDrive", "AppData", "Application Data",
+            "Local Settings", "NetHood", "PrintHood", "Recent", "SendTo", "Start Menu", "My Documents",
+            "source", "repos", "projects", "workspace", "dev", "code", "git", "GitHub",
+            "NTUSER.DAT", "ntuser.dat.LOG1", "ntuser.dat.LOG2", "ntuser.ini",
+            "IntelGraphicsProfiles", "MicrosoftEdgeBackups", "Roaming", "Local", "LocalLow"
         }
 
         self.exclude_patterns = [
@@ -752,6 +759,7 @@ class LeftoverCleanerApp:
             os.environ.get("LOCALAPPDATA", ""),
             os.environ.get("APPDATA", ""),
             r"C:\ProgramData",
+            os.path.expanduser("~"),  # User profile folder (C:\Users\username)
         ]
         scan_paths = [p for p in scan_paths if p and os.path.isdir(p)]
 
